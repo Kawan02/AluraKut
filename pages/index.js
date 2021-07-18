@@ -13,7 +13,7 @@ function ProfileSidebar(propriedades) {
       <hr />
 
       <p>
-      <a className="boxLink" href={`https://github.com/${propriedades.githubUser}.png`}>
+      <a className="boxLink" href={`https://github.com/${propriedades.githubUser}.`}>
         @{propriedades.githubUser}
       </a>
     </p>
@@ -66,7 +66,7 @@ export default function Home(props) {
   // 0-  Pegar o Array  de dados do GitHub
     React.useEffect(function() {
       // GET
-          fetch('https://api.github.com/users/Kawan02/followers')
+          fetch('https://api.github.com/users/peas/followers')
           .then(function (respostaDoServidor) {
             return respostaDoServidor.json();
           })
@@ -136,7 +136,7 @@ export default function Home(props) {
          const comunidade = {
             title: dadosDoForm.get('title'),
             imageUrl: dadosDoForm.get('image'),
-            creatorslug: usuarioAleatorio,
+            creatorslug: githubUser,
          }
 
          fetch('/api/comunidades', {
@@ -181,6 +181,7 @@ export default function Home(props) {
 
     <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
         <ProfileRelationsBox title="Seguidores" items ={seguidores} />
+        
         <ProfileRelationsBoxWrapper>
       <h2 className="smallTitle">
             Comunidades ({comunidades.length})
@@ -228,10 +229,27 @@ export default function Home(props) {
 export async function getServerSideProps(context) {
   const cookies =  nookies.get(context)
   const token = cookies.USER_TOKEN
+
+  const { isAuthenticated } = await fetch("http://localhost:3000/api/auth", {
+    headers: {
+      Authorization: token,
+    },
+  })
+  .then((resposta) => resposta.json())
+
+  console.log('isAuthenticated', isAuthenticated);
+
+  if(!isAuthenticated) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      }
+    }
+  } 
+
+  
   const { githubUser } = jwt.decode(token);
-
-  fetch('https://alurakut.vercel.app/api/auth', {headers: {    Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaXRodWJVc2VyIjoiT01BUklPU09VVEEiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTYyNjYxNTk5MSwiZXhwIjoxNjI3MjIwNzkxfQ.7P6tw7TBBjDGRjV308FhC37qaYZgpcM0djUCPuxBitY'}}).then((resposta) => resposta.json()).then((resultado) => {console.log(resultado)})
-
 
   return {
     props: {
