@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+/*import jwt from "jsonwebtoken";
 
 export default async function githubAuth(req, res) {
   const { authorization } = req.headers;
@@ -26,4 +26,4 @@ export default async function githubAuth(req, res) {
       isAuthenticated: true,
     });
   }
-}
+} */

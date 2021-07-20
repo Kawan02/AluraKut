@@ -6,6 +6,8 @@ import Box from '../src/components/Box'
 import { AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet } from '../src/lib/AluraKutCommons';
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 
+
+
 function ProfileSidebar(propriedades) {
   return(
     <Box as="aside">
@@ -61,12 +63,11 @@ export default function Home(props) {
     'SpruceGabriela',
     'gustavoguanabara',
   ]
-
     const [seguidores, setSeguidores] = React.useState([]);
   // 0-  Pegar o Array  de dados do GitHub
     React.useEffect(function() {
       // GET
-          fetch('https://api.github.com/users/peas/followers')
+          fetch('https://api.github.com/users/kawan02/followers')
           .then(function (respostaDoServidor) {
             return respostaDoServidor.json();
           })
@@ -117,7 +118,7 @@ export default function Home(props) {
     <div className="welcomeArea" style={{ gridArea: 'welcomeArea' }}>
     <Box>
       <h1 className="title">
-      Bem Vindo(a)
+      Bem Vindo(a) {githubUser}
       </h1>
 
       <OrkutNostalgicIconSet />
@@ -180,8 +181,30 @@ export default function Home(props) {
     </div>
 
     <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
-        <ProfileRelationsBox title="Seguidores" items ={seguidores} />
-        
+        <ProfileRelationsBox class ="teste" title="Amigos" items ={seguidores} />
+      
+        <ProfileRelationsBoxWrapper>
+      <h2 className="smallTitle">
+        Seguindo ({pessoasFavoritas.length})
+      </h2>
+
+      
+            <ul> 
+      
+
+              {pessoasFavoritas.map((itemAtual)=> {
+                return (
+                  <li key={itemAtual}>
+                    <a href= {`/users/${itemAtual}` }>
+                      <img src={`https://github.com/${itemAtual}.png`} />
+                      <span>{itemAtual}</span>
+                    </a>
+                  </li>
+                  )
+              })}
+            </ul>
+        </ProfileRelationsBoxWrapper>
+          
         <ProfileRelationsBoxWrapper>
       <h2 className="smallTitle">
             Comunidades ({comunidades.length})
@@ -200,37 +223,20 @@ export default function Home(props) {
           )
       })}
     </ul>
-        </ProfileRelationsBoxWrapper>
-        <ProfileRelationsBoxWrapper>
-      <h2 className="smallTitle">
-        Pessoas da comunidade ({pessoasFavoritas.length})
-      </h2>
-            <ul> 
-      
-
-              {pessoasFavoritas.map((itemAtual)=> {
-                return (
-                  <li key={itemAtual}>
-                    <a href= {`/users/${itemAtual}` }>
-                      <img src={`https://github.com/${itemAtual}.png`} />
-                      <span>{itemAtual}</span>
-                    </a>
-                  </li>
-                  )
-              })}
-            </ul>
+    
         </ProfileRelationsBoxWrapper>
       </div>
     </MainGrid>
   </>
   )
-}
+} 
+
 
 export async function getServerSideProps(context) {
   const cookies =  nookies.get(context)
   const token = cookies.USER_TOKEN
 
-  const { isAuthenticated } = await fetch("http://localhost:3000/api/auth", {
+  const { isAuthenticated } = await fetch("https://alurakut-jwfelipee.vercel.app/api/auth", {
     headers: {
       Authorization: token,
     },
@@ -248,12 +254,13 @@ export async function getServerSideProps(context) {
     }
   } 
 
-  
-  const { githubUser } = jwt.decode(token);
 
+  const { githubUser } = jwt.decode(token);
+  console.log(githubUser);
   return {
     props: {
       githubUser
-    }, // will be passed to the page component as props
-  }
+
+    },  // will be passed to the page component as props
+  } 
 }

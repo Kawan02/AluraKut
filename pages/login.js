@@ -4,13 +4,17 @@ import nookies from 'nookies';
 
 export default function LoginScreen() {
     const router = useRouter();
-    const [githubUser, setGithubUser] = React.useState('kawan02');
-
+    const [githubUser, setGithubUser] = React.useState('');
+  
   return (
     <main style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <div className="loginScreen">
         <section className="logoArea">
-          <img src="http://alurakut.vercel.app//logo.svg" />
+          <img src="http://alurakut.vercel.app//logo.svg" 
+          
+          // link da image do ORKUT : https://www.orkut.br.com/assets/img/orkut_logo.png
+          
+          /> 
 
           <p><strong>Conecte-se</strong> aos seus amigos e familiares usando recados e mensagens instantâneas</p>
           <p><strong>Conheça</strong> novas pessoas através de amigos de seus amigos e comunidades</p>
@@ -57,7 +61,7 @@ export default function LoginScreen() {
           <footer className="box">
             <p>
               Ainda não é membro? <br />
-              <a href="/login">
+              <a href="https://github.com/login">
                 <strong>
                   ENTRAR JÁ
               </strong>

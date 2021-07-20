@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import NextLink from 'next/link';
 
 const BASE_URL = 'http://alurakut.vercel.app/';
+// link da image do ORKUT : https://www.orkut.br.com/assets/img/orkut_logo.png //
 const v = '1';
 
 
@@ -35,7 +36,7 @@ export function AlurakutMenu({ githubUser }) {
         </nav>
 
         <nav>
-          <a href={`/logout`}>
+          <a href={`/login`}>
             Sair
           </a>
           <div>
@@ -211,7 +212,7 @@ export function AlurakutProfileSidebarMenuDefault() {
           <img src={`${BASE_URL}/icons/plus.svg`} />
             GitHub Trends
           </a>
-        <a href="/logout">
+        <a href="/login">
           <img src={`${BASE_URL}//icons/logout.svg`} />
             Sair 
           </a>
@@ -346,6 +347,7 @@ const AlurakutLoginScreen = css`
       "formArea"
       "footerArea";
     @media(min-width: 860px) {
+      opacity: 0.9;
       grid-template-columns: 2fr 1fr;
       grid-template-areas: 
               "logoArea formArea"
