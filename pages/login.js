@@ -6,6 +6,17 @@ export default function LoginScreen() {
     const router = useRouter();
     const [githubUser, setGithubUser] = React.useState('');
   
+    const checkGithubUser = async (githubUser) => {
+      const userChecked = await fetch(`https://api.github.com/users/${githubUser}`)
+        .then(res => {
+          return res.ok;
+        });
+  
+        console.log('checkGithubUser', userChecked);
+  
+        return userChecked;
+  
+    }
   return (
     <main style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <div className="loginScreen">
@@ -21,6 +32,7 @@ export default function LoginScreen() {
           <p><strong>Compartilhe</strong> seus vídeos, fotos e paixões em um só lugar</p>
         </section>
 
+
         <section className="formArea">
           <form className="box" onSubmit={(infosDoEvento) => {
                 infosDoEvento.preventDefault();
@@ -31,6 +43,7 @@ export default function LoginScreen() {
                     headers: {
                         'Content-Type': 'application/json'
                 },
+                
                 body: JSON.stringify({ githubUser: githubUser })
              })
              .then(async (respostaDoServer) => {
@@ -41,14 +54,15 @@ export default function LoginScreen() {
                   maxAge: 86400 * 7
                 })
                 router.push('/')
-             })
+             }) 
+             
          }}>
             <p>
               Acesse agora mesmo com seu usuário do <strong>GitHub</strong>!
           </p>
             <input 
             placeholder="Usuário" 
-            value={githubUser} 
+            value= {githubUser} 
             onChange= {(evento) => {
                 setGithubUser(evento.target.value)
             }}
