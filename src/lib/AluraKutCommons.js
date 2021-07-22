@@ -155,6 +155,7 @@ AlurakutMenu.Wrapper = styled.header`
       }
     } 
   }
+  
 `;
 AlurakutMenu.Logo = styled.img`
   background-color: #ffffff;
@@ -167,7 +168,7 @@ function AlurakutMenuProfileSidebar(propriedades) {
   return (
     <div className="alurakutMenuProfileSidebar">
       <div>
-        <img src={`https://github.com/${propriedades.githubUser}.png`} style={{ borderRadius: '8px' }} />
+        <img src={`https://github.com/${BASE_URL}.png`} style={{ borderRadius: '8px' }} />
         <hr />
         <p>
           <a className="boxLink" href={`https://github.com/${propriedades.githubUser}.png`}>

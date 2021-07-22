@@ -1,9 +1,13 @@
-/* import {SiteClient} from 'datocms-client';
+/*import {SiteClient} from 'datocms-client';
 import { Recado } from '../../src/services/models';
 
-const API_TOKEN = '118823ccb9166ae2c2d8a7bde5efa3';
+const API_TOKEN = '0c10482072a744d472aac2fa9ceab3';
 const client = new SiteClient(API_TOKEN);
-const DATO_MODEL_ID = '990185';
+const DATO_MODEL_ID = '1002596';
+
+client.items.create({
+  itemType: "1002596",
+})
 
 export default async function receiveRequest(req, res){
   if(req.method === 'POST'){

@@ -191,8 +191,15 @@ export default function Home(props) {
           <h5>Esse projeto foi feito através do vídeo da Rafaella Ballerini, onde foi feito um formulário de cadastro :)</h5>
         <img src="https://lh3.googleusercontent.com/wah6iHYS_yxw304EMFMUgrziV-NLxa5uuCQo7t11h3kNWI0hVyMvbKgKtDO3rwAVOSzp491YFAXlqPq3YFNkhUiPo3IsSRBSLohY4aarphRjLIyA9MkeCcSIgRpUvJ-8R3OoNR_GoDI9e0NZos4X4AloQrnGOhCKkVQGBAJnM4o24kkIgPUAfzlLwwXKvHaIBdcYfXlm42hYs9vLy_lR5Fd9jga6Ho8ZbTfm-DwUYx93Xz9kR7h2KzdqYva_3bPzmbj0C9i6pidc6VpXdWd2rbaqT2YAez-4FSUvLcohqVF_ybZ9fzoXfbWRRi-VpAr3fpJEBPvi5Bz6YjCI7ARnYJ_eDZbJ7c9NRIEPOeTH4ZmQ9jDNUTWSPLMdVXOLablS-aQc_7V3d5mzV1jsCVoifM6gfwEIAMQGHUeLIfPWCN9_gU3CTaxmxfdsvi5mGy1MHSSAMLyVL6sZBqQqJX3ETViD4ELn5XKNQ6yPQLC7AQtj85Q5FmMalyvpHOAWzngpKV6rpy3iD_fqs9hWfnTzAFmVSM_CML1-qNBnDNS35gemHMNFFAVqrQKwxRidQSN6jAWUWnJUCNauodU64hpbhV-LslvuLgG3YrvHYiumh-Oa6vdOiQNMqbnXL__nNDChXml_1fFLttEzXiKZVhYg2sMLDhjT2FazV5_w1iH89a7nuabxF7zWdljCbp4Ti18kkcdJiushsfvZifrsNkLJgRA=w1366-h624-no?authuser=0"/>
           <br />
-          <h5>Site de cadastro, onde a proposta era fazer um formulário simples e usando a validação REGEX</h5>
+          <h5>Site de cadastro, onde a proposta era fazer um formulário simples e usando a validação REGEX.</h5>
           <img src="https://lh3.googleusercontent.com/G_5lokZA0c13VxrErzAPlY9TYNwlrWqMbJ7fIBRQzNVC5KY5RCkxmD9ppSWKp2k-vTI_QoTduMuTJ8u6ch52OzbxysfhD47xVzzm3wjPqWiBJ4Gl66_EYCqvgnPfDxMYGf75oGr8EohKJQ_EakTh4ldHSmlvd3AnhmVsRzqh9pXfsNh7DDqEAnOSYV8tY_4Y1Rilfy0aYZkC8jXwyIKkzEDgYb0-t2LztBDGmQRswZf9pdeuEzUTv_c-yVoNSviCw67VZuTxwmwg7NPhCiBbHs4v9DT86Hv1kaAiO6Ma--6z3l4D0_0kXEVKlfTRzJj-o4pO3i1fJWReFZ4GpyIGMWMn3fkeX5uC_CwVtUNZmlJvu017Rv1d74QRhCqI8wBrE0NZdgtRF5gLNoi_P36v3gNqkP8Oh-wjSsHKXVC_3QQBadxtSvtqJ-10ALu9vxkNPTYZ6IjZ31J8x5QkYOOUXHXPaQ11B15Hp6ueKaXf9X4Anv2NbpTkutG7vivR49W4O7_dg9a_q5SAxmdZ2YzpsNfFEPdqRMGGTUSb8EC2qoG3FLUxeAklDEmAmpKqkEk_sR8oO-vy99MH1XwV1MKg4oyafvT25tGqo0ru3I8ZuRe8qEEzT3Si-QqpPaRwS9nOLbsrrrH4T7Hk_bTKmvoYnN825WOt1IHv1i72AmtlrGSk1-HrBUP4rV6_9LZyLWrMG21kZloejD0prXB7V1JrlSM=w1112-h611-no?authuser=0"/>
+          <br />
+          <h5>Site desenvolvido no curso de Programação para internet com HTML5 e CSS3 na Digital Innovation One, e o 
+            interessante desse site é que ele usa o framework Bootstrap, ou seja esse site é responsivo
+            ele se adapta perfeitamente seja em uma tela maior ou menor.
+            </h5>
+          <br />
+          <img src="https://lh3.googleusercontent.com/3LXqJfWqbY530wsd8EihmsKSBERfJp0E8M-aSOr7g-B8UBBYZGADa8ilf8cJGF0EVkPfxIoeJsK4yRFvuo6Vu7tTVpgg32CCt1QTara5ZH5en2T1jGLKocm68Y83ff00oFuQWBIcYDQCDsB05PORv8A0qLnO9yG5IgPACF2oCVaYvNoPnDPNhbRFB_ggj4fYuQdKf8cZ4udD-8LWtMuKZ-46VOEA1wlzdGzvNV8LJZ4cSNMZOy-NKR5MqDp55HzwGO9zAoi_VPJ0E_1SQ7Glc9jQdRvYblkJzzgAC_O8dfcB0tN8ZO3mgP-IO35W9Zn76pA3BS01tBGCR0mklC0aOFok7IIfRVW99jxfFNv9k0Q13yHh4EWmA7mhuxnurw5R0R6oKLxKXino_JAaYzhA5zbnQ9eFdl9TqDm19eDJswkxzcIRzgSs7w7TvuEFsGHVEV3UxXoV2wLqDWTZk_AFTPFx-8TWq8TtdtXtoTm03we35ugFT3kTzC5w6W5ESqZyp6J8z-fsaNR0Kwgqpa2sB64hB5kmpLhlgJnLfw8Cg7SJS4hDGEPTyk1b2hKaYJfXHGsH3Y-UR2mfxCxzRmnxEwxOuxvJgYuc1PWW3s7KvfeR1YpEp6MJKrFJxXhQLpuFxNscGmbqyh6vN_kDg-PZAHlEfF9kN8aYtOgLKmEnPp5GPhNQRuki4lXhZGGx4GWal5kgG5xaAkdopoZuFc3Z12A=w1351-h616-no?authuser=0"/>
       </div>
     </Box>
     </div>
