@@ -195,7 +195,7 @@ export default function Home(props) {
           <img src="https://lh3.googleusercontent.com/G_5lokZA0c13VxrErzAPlY9TYNwlrWqMbJ7fIBRQzNVC5KY5RCkxmD9ppSWKp2k-vTI_QoTduMuTJ8u6ch52OzbxysfhD47xVzzm3wjPqWiBJ4Gl66_EYCqvgnPfDxMYGf75oGr8EohKJQ_EakTh4ldHSmlvd3AnhmVsRzqh9pXfsNh7DDqEAnOSYV8tY_4Y1Rilfy0aYZkC8jXwyIKkzEDgYb0-t2LztBDGmQRswZf9pdeuEzUTv_c-yVoNSviCw67VZuTxwmwg7NPhCiBbHs4v9DT86Hv1kaAiO6Ma--6z3l4D0_0kXEVKlfTRzJj-o4pO3i1fJWReFZ4GpyIGMWMn3fkeX5uC_CwVtUNZmlJvu017Rv1d74QRhCqI8wBrE0NZdgtRF5gLNoi_P36v3gNqkP8Oh-wjSsHKXVC_3QQBadxtSvtqJ-10ALu9vxkNPTYZ6IjZ31J8x5QkYOOUXHXPaQ11B15Hp6ueKaXf9X4Anv2NbpTkutG7vivR49W4O7_dg9a_q5SAxmdZ2YzpsNfFEPdqRMGGTUSb8EC2qoG3FLUxeAklDEmAmpKqkEk_sR8oO-vy99MH1XwV1MKg4oyafvT25tGqo0ru3I8ZuRe8qEEzT3Si-QqpPaRwS9nOLbsrrrH4T7Hk_bTKmvoYnN825WOt1IHv1i72AmtlrGSk1-HrBUP4rV6_9LZyLWrMG21kZloejD0prXB7V1JrlSM=w1112-h611-no?authuser=0"/>
           <br />
           <h5>Site desenvolvido no curso de Programação para internet com HTML5 e CSS3 na Digital Innovation One, e o 
-            interessante desse site é que ele usa o framework Bootstrap, ou seja esse site é responsivo
+            interessante desse site é que ele usa o framework Bootstrap, ou seja esse site é responsivo,
             ele se adapta perfeitamente seja em uma tela maior ou menor.
             </h5>
           <br />
